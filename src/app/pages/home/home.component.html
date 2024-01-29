@@ -9,21 +9,14 @@
     </app-big-card>
   </div>
   <div class="articles__others">
-    <app-small-card
-      Id="2"
-      cardTitle="Nova série da Marvel anunciada pelo Disney+"
-      photoCover="https://cinepop.com.br/wp-content/uploads/2019/10/disney-plus.jpg"
-    ></app-small-card>
-    <app-small-card
-      Id="3"
-      cardTitle="Estreia do novo filme de Beyoncé"
-      photoCover="https://www.londrinatur.com.br/wp-content/uploads/2023/11/Renaissance-A-Film-By-Beyonce-OFELM.jpg"
-    ></app-small-card>
-    <app-small-card
-      Id="4"
-      cardTitle="Nova série da Marvel anunciada pelo Disney+"
-      photoCover="https://cinepop.com.br/wp-content/uploads/2019/10/disney-plus.jpg"
-    ></app-small-card>
-
+    <div *ngFor="let card of cardsData; let i = index">
+      <ng-container *ngIf="i !== 0">
+        <app-small-card
+          [Id]="card.id"
+          [cardTitle]="card.title"
+          [photoCover]="card.photoCover"
+        ></app-small-card>
+      </ng-container>
+    </div>
   </div>
 </div>
