@@ -1,15 +1,17 @@
 <div class="container__big-card">
     <div class="big-card__picture">
       <img
-        src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+        src="{{ photoCover }}"
         alt=""
         />
     </div>
 
     <div class="big-card__title">
-        <h2><a href="#">Saiu a nova versão do Angular</a></h2>
+        <h2><a [routerLink]="['content', Id]">{{ cardTitle }}</a></h2>
     </div>
+
     <div class="big-card__description">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe qui aperiam iure facilis adipisci sit accusantium non aliquam maxime neque, quidem veritatis error assumenda, voluptate ullam. Ut quos soluta excepturi.</p>
+      <p> {{cardDescription}} </p>
     </div>
+
 </div>
